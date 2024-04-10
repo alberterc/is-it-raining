@@ -1,0 +1,30 @@
+package input
+
+import (
+    "github.com/alberterc/is-it-raining/view/layout"
+)
+
+templ LandingPage() {
+    @layout.Base() {
+        <div id="page-container" class="flex items-center justify-center w-full h-full font-serif bg-[url('/static/img/main_background.png')]">
+            <div id="main-component-container" class="flex flex-col w-5/12 -mt-20">
+                <div id="title-container" class="self-center">
+                    <span class="block text-9xl text-white py-5 font-bold">Is It Raining</span>
+                    <span class="block text-3xl text-white py-3">...in</span>
+                </div>
+                <div id="textfield-input-container" class="relative">
+                    <input
+                        type="text"
+                        placeholder="City, Country"
+                        class="block w-full rounded-full px-6 py-2 text-3xl hover:bg-gray-200 focus:bg-gray-200"
+                    />
+                    <a 
+                        href="#"
+                        class="absolute end-6 bottom-4 text-black font-bold underline">
+                        my location
+                    </a>
+                </div>
+            </div>
+        </div>
+    }
+}
